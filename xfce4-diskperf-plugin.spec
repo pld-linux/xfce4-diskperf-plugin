@@ -33,6 +33,7 @@ statystyk dysku" w /proc/partitions).
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure \
 	--disable-static
 
