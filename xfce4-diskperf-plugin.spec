@@ -1,5 +1,5 @@
-Summary:	Disk performance XFce panel plugin
-Summary(pl):	Wtyczka wydajno¶ci dysku dla panelu XFce
+Summary:	Disk performance Xfce panel plugin
+Summary(pl):	Wtyczka wydajno¶ci dysku dla panelu Xfce
 Name:		xfce4-diskperf-plugin
 Version:	1.5
 Release:	2
