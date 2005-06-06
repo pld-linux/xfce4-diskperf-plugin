@@ -8,6 +8,7 @@ Group:		X11/Applications
 Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.gz
 # Source0-md5:	cb1b2637166b8a4355b3df85e593640f
 URL:		http://xfce-goodies.berlios.de/
+BuildRequires:	automake
 BuildRequires:	libxfce4util-devel >= 3.99
 BuildRequires:	libxfcegui4-devel >= 3.99
 BuildRequires:	pkgconfig
