@@ -40,7 +40,6 @@ statystyk dysku" w /proc/partitions).
 %patch1 -p1
 
 %build
-cp -f /usr/share/automake/config.sub .
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
