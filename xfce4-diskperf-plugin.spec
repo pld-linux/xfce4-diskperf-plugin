@@ -6,7 +6,7 @@ Release:	1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
 Source0:	http://goodies.xfce.org/releases/xfce4-diskperf-plugin/%{name}-%{version}.tar.bz2
-# Source0-md5:	e47c87e98de21b8c8b75680f7c1b491d
+# Source0-md5:	be819b14db68369f541a02f9a27e9dc5
 Patch0:		%{name}-libtool.patch
 Patch1:		%{name}-bug1842.patch
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
