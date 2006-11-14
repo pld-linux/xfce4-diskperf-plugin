@@ -1,0 +1,11 @@
+diff -urN xfce4-diskperf-plugin-2.0/configure.ac xfce4-diskperf-plugin-2.0.new/configure.ac
+--- xfce4-diskperf-plugin-2.0/configure.ac	2006-11-14 17:13:53.000000000 +0100
++++ xfce4-diskperf-plugin-2.0.new/configure.ac	2006-11-14 17:13:32.000000000 +0100
+@@ -24,6 +24,7 @@
+ dnl Check for basic programs
+ AC_PROG_CC
+ AC_PROG_INSTALL
++AC_PROG_LIBTOOL
+ AC_PROG_INTLTOOL
+ 
+ dnl Check for standard header files
