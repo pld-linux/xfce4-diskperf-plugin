@@ -1,19 +1,21 @@
 Summary:	Disk performance Xfce panel plugin
 Summary(pl):	Wtyczka wydajno¶ci dysku dla panelu Xfce
 Name:		xfce4-diskperf-plugin
-Version:	1.5
-Release:	3
+Version:	2.0
+Release:	0.1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
-Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.gz
-# Source0-md5:	cb1b2637166b8a4355b3df85e593640f
-URL:		http://xfce-goodies.berlios.de/
+Source0:	http://goodies.xfce.org/releases/xfce4-diskperf-plugin/%{name}-%{version}.tar.bz2
+# Source0-md5:	e47c87e98de21b8c8b75680f7c1b491d
+URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
+BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libxfce4util-devel >= 3.99
-BuildRequires:	libxfcegui4-devel >= 3.99
+BuildRequires:	libtool
+BuildRequires:	libxfce4util-devel >= 4.3.90.1
+BuildRequires:	libxfcegui4-devel >= 4.3.90.1
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-panel-devel >= 3.99
-Requires:	xfce4-panel >= 3.99
+BuildRequires:	xfce4-panel-devel >= 4.3.90.1
+Requires:	xfce4-panel >= 4.3.90.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,6 +37,11 @@ statystyk dysku" w /proc/partitions).
 
 %build
 cp -f /usr/share/automake/config.sub .
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--disable-static
 
@@ -54,4 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog COPYING NEWS README
-%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*.so
+%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*
+%{_datadir}/xfce4/panel-plugins/*.desktop
