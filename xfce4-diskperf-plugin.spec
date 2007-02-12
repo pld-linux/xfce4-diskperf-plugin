@@ -1,5 +1,5 @@
 Summary:	Disk performance Xfce panel plugin
-Summary(pl):	Wtyczka wydajno¶ci dysku dla panelu Xfce
+Summary(pl.UTF-8):   Wtyczka wydajnoÅ›ci dysku dla panelu Xfce
 Name:		xfce4-diskperf-plugin
 Version:	2.1.0
 Release:	1
@@ -24,11 +24,11 @@ least 2.4.20 compiled with CONFIG_BLK_STATS turned on, or possibly
 older kernel patched with "Disk extended statistics" in
 /proc/partitions).
 
-%description -l pl
-Wtyczka DiskPerf wy¶wietla wydajno¶æ dysku/partycji bazuj±c na danych
-rsect/wsect dostarczanych przez j±dro Linuksa 2.6 lub nowsze 2.4
-(conajmniej 2.4.20 skompilowane z w³±czonym CONFIG_BLK_STATS lub
-ewentualnie ze starszymi wersjami z dodan± ³at± "rozszerzonych
+%description -l pl.UTF-8
+Wtyczka DiskPerf wyÅ›wietla wydajnoÅ›Ä‡ dysku/partycji bazujÄ…c na danych
+rsect/wsect dostarczanych przez jÄ…dro Linuksa 2.6 lub nowsze 2.4
+(conajmniej 2.4.20 skompilowane z wÅ‚Ä…czonym CONFIG_BLK_STATS lub
+ewentualnie ze starszymi wersjami z dodanÄ… Å‚atÄ… "rozszerzonych
 statystyk dysku" w /proc/partitions).
 
 %prep
