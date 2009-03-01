@@ -1,16 +1,13 @@
 Summary:	Disk performance Xfce panel plugin
 Summary(pl.UTF-8):	Wtyczka wydajności dysku dla panelu Xfce
 Name:		xfce4-diskperf-plugin
-Version:	2.1.0
+Version:	2.2.0
 Release:	1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
 Source0:	http://goodies.xfce.org/releases/xfce4-diskperf-plugin/%{name}-%{version}.tar.bz2
-# Source0-md5:	fc74a0c7d2b9486cdb704a072cd72b83
+# Source0-md5:	e970158fcac5b58bdc1539bc84d7b5ec
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
-BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake
-BuildRequires:	intltool
 BuildRequires:	pkgconfig
 BuildRequires:	xfce4-dev-tools >= 4.4.0
 BuildRequires:	xfce4-panel-devel >= 4.4.0
@@ -35,11 +32,6 @@ statystyk dysku" w /proc/partitions).
 %setup -q
 
 %build
-%{__intltoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure \
 	--disable-static
 
@@ -50,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+mv $RPM_BUILD_ROOT%{_datadir}/locale/pt{_PT,}
+mv $RPM_BUILD_ROOT%{_datadir}/locale/nb{_NO,}
 
 %find_lang %{name}
 
