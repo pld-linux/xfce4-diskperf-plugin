@@ -54,6 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/*.la
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
 
 %find_lang %{name}
@@ -64,5 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog COPYING NEWS README
-%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/xfce4-diskperf-plugin
-%{_datadir}/xfce4/panel-plugins/diskperf.desktop
+%attr(755,root,root) %{_libdir}/xfce4/panel/plugins/libdiskperf.so
+%{_datadir}/xfce4/panel/plugins/diskperf.desktop
