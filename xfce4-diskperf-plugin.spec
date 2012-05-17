@@ -1,13 +1,12 @@
 Summary:	Disk performance Xfce panel plugin
 Summary(pl.UTF-8):	Wtyczka wydajności dysku dla panelu Xfce
 Name:		xfce4-diskperf-plugin
-Version:	2.3.0
-Release:	2
+Version:	2.5.3
+Release:	1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	c6ece8123c762ee203cbc6fd5450b503
-Patch0:		%{name}-ui.patch
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	ba880f763e273787d0c8365eebc4feab
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
@@ -15,9 +14,9 @@ BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-dev-tools >= 4.4.0
-BuildRequires:	xfce4-panel-devel >= 4.4.0
-Requires:	xfce4-panel >= 4.4.0
+BuildRequires:	xfce4-dev-tools >= 4.10.0
+BuildRequires:	xfce4-panel-devel >= 4.10.0
+Requires:	xfce4-panel >= 4.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,7 +35,6 @@ statystyk dysku" w /proc/partitions).
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__intltoolize}
