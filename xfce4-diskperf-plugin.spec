@@ -1,12 +1,12 @@
 Summary:	Disk performance Xfce panel plugin
 Summary(pl.UTF-8):	Wtyczka wydajności dysku dla panelu Xfce
 Name:		xfce4-diskperf-plugin
-Version:	2.5.5
+Version:	2.6.2
 Release:	1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	199e4365cb3a1fcd5f6164044aedba17
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	538119ea97a217695b297e2d165b305f
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
@@ -14,8 +14,8 @@ BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-dev-tools >= 4.12.0
-BuildRequires:	xfce4-panel-devel >= 4.12.0
+BuildRequires:	xfce4-dev-tools >= 4.14.0
+BuildRequires:	xfce4-panel-devel >= 4.14.0
 Requires:	xfce4-panel >= 4.12.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
