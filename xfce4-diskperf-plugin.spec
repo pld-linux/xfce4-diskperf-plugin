@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/*.la
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ur_PK}
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ie,ur_PK}
 
 %find_lang %{name}
 
