@@ -1,22 +1,24 @@
 Summary:	Disk performance Xfce panel plugin
 Summary(pl.UTF-8):	Wtyczka wydajności dysku dla panelu Xfce
 Name:		xfce4-diskperf-plugin
-Version:	2.7.0
+Version:	2.7.1
 Release:	1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	feea7ff814731b152a2c1162d04c6961
-URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
+Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.7/%{name}-%{version}.tar.bz2
+# Source0-md5:	502d7b2bf436b2b58860c8cc5ab6ab19
+URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
-BuildRequires:	intltool
+BuildRequires:	glib2-devel >= 1:2.50.0
+BuildRequires:	gtk+3-devel >= 3.22.0
 BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel
+BuildRequires:	libxfce4ui-devel >= 4.16.0
+BuildRequires:	libxfce4util-devel >= 4.16.0
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-dev-tools >= 4.14.0
-BuildRequires:	xfce4-panel-devel >= 4.14.0
-Requires:	xfce4-panel >= 4.12.0
+BuildRequires:	xfce4-dev-tools >= 4.16.0
+BuildRequires:	xfce4-panel-devel >= 4.16.0
+Requires:	xfce4-panel >= 4.16.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,7 +39,6 @@ statystyk dysku" w /proc/partitions).
 %setup -q
 
 %build
-%{__intltoolize}
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
